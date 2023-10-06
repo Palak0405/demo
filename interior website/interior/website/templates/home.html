@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}Home {% endblock %}
+{% block css %}
+<style>
+    #b1 {
+        width: 2500px;
+        height: 90vh;
+    }
+    #b2 {
+        width: 2500px;
+        height: 90vh;
+    }
+    #b3 {
+        width: 2500px;
+        height: 90vh;
+    }
+    #b4 {
+        width: 2500px;
+        height: 90vh;
+    }
+    .image-back{
+        position: relative;
+    }
+    .image{
+        display: flex;
+        aspect-ratio: 16 / 9;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        /* box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25); */
+    }
+    .image img{
+        flex: 1 0 100%;
+        scroll-snap-align: start;
+        object-fit: cover;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<section class="crousel">
+    <div class="image-back">
+        <div class="image">
+            <img id="b1" src="/static/images/b1.jpg" alt="b1 image">
+            <img id="b2" src="/static/images/b2.jpg" alt="b2 image">
+            <img id="b3" src="/static/images/b3.jpg" alt="b3 image">
+            <img id="b4" src="/static/images/b4.jpg" alt="b4 image">
+        </div>
+    </div>
+
+</section>
+{% endblock %}
